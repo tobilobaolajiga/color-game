@@ -60,6 +60,8 @@ function assignColors(color, score) {
       tile.style.backgroundColor = tile[index];
 
       if (tile[index] === mainColor) {
+        wrong.pause();
+        correct.play();
         tile.style.backgroundColor = tile[index];
         tile.style.outline = '5px solid white';
 
@@ -69,8 +71,7 @@ function assignColors(color, score) {
         }, 1000);
 
         event.stopPropagation();
-        wrong.pause();
-        correct.play();
+
         accScore += 10; //add score
         displayScore.textContent = `SCORE : ${accScore}`;
         setTimeout(() => {
@@ -80,7 +81,6 @@ function assignColors(color, score) {
         event.stopPropagation();
         wrong.play();
         tile.style.outline = '5px solid red';
-
         document.querySelector('.admin .status').textContent = '☹️WRONG!';
       }
     });
@@ -112,6 +112,7 @@ function runAgain(score) {
   //assign colors
   assignColors(color, score);
 }
+
 reset.addEventListener('click', function Reset(score) {
   accScore = 0;
   click.play();
@@ -120,6 +121,7 @@ reset.addEventListener('click', function Reset(score) {
   displayScore.textContent = 'SCORE: 0';
   tiles.forEach((tile, index) => {
     tile.style.backgroundColor = excludedColors[index]; //return to default colors
+    tile.style.outline = '';
   });
   color = targetColor();
   target.style.backgroundColor = color;
