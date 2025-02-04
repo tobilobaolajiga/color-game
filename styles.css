@@ -47,6 +47,8 @@ h1 {
   height: 6rem;
   background-color: brown;
   border-radius: 25%;
+  border: none;
+  border-radius: 25%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   outline: 5px solid white;
   outline-offset: 8px;
