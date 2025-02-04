@@ -70,7 +70,7 @@ function assignColors(color, score) {
         document.querySelector('.admin .status').textContent = '🎉CORRECT!';
         setTimeout(() => {
           removeStat();
-        }, 1000);
+        }, 1500);
 
         event.stopPropagation();
         wrong.pause();
