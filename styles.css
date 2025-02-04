@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.game {
+  height: 100vh;
+  background-image: url('/assets/bg-brick.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'orbitron';
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 3rem;
+}
+
+.admin {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.colors {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.colors .targetColor {
+  width: 6rem;
+  height: 6rem;
+  background-color: brown;
+  border-radius: 25%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  outline: 5px solid white;
+  outline-offset: 8px;
+}
+
+.colors .options-cont {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.colors .options {
+  display: flex;
+}
+
+.colors .options .color {
+  width: 6rem;
+  margin: 0.2rem;
+  height: 6rem;
+  border-radius: 25%;
+  transition: 0.2s;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.colors .options .color-one {
+  background-color: #39ff14;
+}
+.colors .options .color-two {
+  background-color: #1b03a3;
+}
+.colors .options .color-three {
+  background-color: #ff10f0;
+}
+.colors .options .color-four {
+  background-color: #ff6700;
+}
+.colors .options .color-five {
+  background-color: #ff073a;
+}
+.colors .options .color-six {
+  background-color: #00ffff;
+}
+
+.colors .admin .reset {
+  color: white;
+  background-color: transparent;
+  font-size: 1rem;
+  font-family: 'orbitron';
+  padding: 0.3rem;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.colors .admin .status {
+  transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 3rem;
+  }
+  .colors .targetColor {
+    width: 10rem;
+    height: 10rem;
+    /* margin-left: 6rem; */
+    background-color: brown;
+    border-radius: 25%;
+  }
+
+  .colors .options .color {
+    width: 9rem;
+    margin: 0.3rem;
+    height: 9rem;
+    border-radius: 25%;
+  }
+
+  .admin {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+
+  .colors .admin .reset {
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+    font-family: 'orbitron';
+    padding: 0.3rem;
+  }
+
+  /* .colors .justCols {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .colors .options-cont {
+    margin-right: 5rem;
+  } */
+}
+@media (min-width: 996px) {
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2.5rem;
+  }
+  .colors .targetColor {
+    width: 9rem;
+    height: 9rem;
+    background-color: brown;
+    border-radius: 25%;
+  }
+
+  .colors .options .color {
+    width: 8rem;
+    margin: 0.3rem;
+    height: 8rem;
+    border-radius: 25%;
+  }
+
+  .colors {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-evenly; */
+  }
+  .admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+  }
+
+  .colors .admin .reset {
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+    font-family: 'orbitron';
+    padding: 0.3rem;
+  }
+}

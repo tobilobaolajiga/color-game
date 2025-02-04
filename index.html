@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Guess The Color</title>
+  </head>
+  <body>
+    <div class="game">
+      <div>
+        <h1 class="name" data-testid="gameInstructions">
+          GUESS THE CORRECT COLOR
+        </h1>
+      </div>
+
+      <div class="colors">
+        <div class="targetColor" data-testid="colorBox"></div>
+
+        <div class="options-cont">
+          <div class="options">
+            <div class="color-one color" data-testid="colorOption"></div>
+          </div>
+
+          <div class="options">
+            <div class="color-two color" data-testid="colorOption"></div>
+            <div class="color-three color" data-testid="colorOption"></div>
+          </div>
+          <div class="options">
+            <div class="color-four color" data-testid="colorOption"></div>
+            <div class="color-five color" data-testid="colorOption"></div>
+            <div class="color-six color" data-testid="colorOption"></div>
+          </div>
+        </div>
+        <div class="admin">
+          <p data-testid="gameStatus" class="status"></p>
+          <p class="score" data-testid="score">SCORE: <span>0</span></p>
+          <button class="reset" data-testid="newGameButton">RESET</button>
+        </div>
+        <audio id="click" src="/assets/sound_click.wav"></audio>
+        <audio id="correct" src="/assets/correct.wav"></audio>
+        <audio id="wrong" src="/assets/wrong.wav"></audio>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
