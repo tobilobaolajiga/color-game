@@ -65,7 +65,6 @@ function assignColors(color, score) {
       if (tile[index] === mainColor) {
         tile.style.backgroundColor = tile[index];
         tile.style.outline = '5px solid white';
-        tile.style.borderRadius = '25%';
 
         document.querySelector('.admin .status').textContent = '🎉CORRECT!';
         setTimeout(() => {
@@ -84,7 +83,7 @@ function assignColors(color, score) {
         event.stopPropagation();
         wrong.play();
         tile.style.outline = '5px solid red';
-        tile.style.borderRadius = '25%';
+
         console.log('Oops');
         document.querySelector('.admin .status').textContent = '☹️WRONG!';
       }
