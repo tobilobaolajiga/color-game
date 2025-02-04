@@ -123,6 +123,7 @@ reset.addEventListener('click', function Reset(score) {
   displayScore.textContent = 'SCORE: 0';
   tiles.forEach((tile, index) => {
     tile.style.backgroundColor = excludedColors[index]; //return to default colors
+    tile.style.outline = '';
   });
   color = targetColor();
   target.style.backgroundColor = color;
