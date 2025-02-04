@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +20,7 @@
     <div class="game">
       <div>
         <h1 class="name" data-testid="gameInstructions">
-          GUESS THE CORRECT COLOR
+          GUESS THE CORRECT COLOR!
         </h1>
       </div>
 
@@ -40,8 +44,10 @@
         </div>
         <div class="admin">
           <p data-testid="gameStatus" class="status"></p>
-          <p class="score" data-testid="score">SCORE: <span>0</span></p>
-          <button class="reset" data-testid="newGameButton">RESET</button>
+          <p class="score" data-testid="score">SCORE: 0</p>
+          <button class="reset" data-testid="newGameButton">
+            <i class="ri-refresh-line"></i> RESET
+          </button>
         </div>
         <audio id="click" src="/assets/sound_click.wav"></audio>
         <audio id="correct" src="/assets/correct.wav"></audio>

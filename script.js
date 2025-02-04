@@ -20,7 +20,7 @@ const excludedColors = [
 
 color = targetColor();
 target.style.backgroundColor = color;
-console.log(color);
+
 function targetColor() {
   do {
     color = `#${Math.floor(Math.random() * 16777215)
@@ -59,9 +59,6 @@ function assignColors(color, score) {
     tile.addEventListener('click', function () {
       tile.style.backgroundColor = tile[index];
 
-      console.log(tile[index]);
-      console.log(mainColor);
-
       if (tile[index] === mainColor) {
         tile.style.backgroundColor = tile[index];
         tile.style.outline = '5px solid white';
@@ -69,7 +66,7 @@ function assignColors(color, score) {
         document.querySelector('.admin .status').textContent = '🎉CORRECT!';
         setTimeout(() => {
           removeStat();
-        }, 1500);
+        }, 1000);
 
         event.stopPropagation();
         wrong.pause();
@@ -84,16 +81,17 @@ function assignColors(color, score) {
         wrong.play();
         tile.style.outline = '5px solid red';
 
-        console.log('Oops');
         document.querySelector('.admin .status').textContent = '☹️WRONG!';
       }
     });
   });
   return accScore;
 }
+
 function removeStat() {
   document.querySelector('.admin .status').textContent = '';
 }
+
 function runAgain(score) {
   //reset target color
 
@@ -116,19 +114,17 @@ function runAgain(score) {
 }
 reset.addEventListener('click', function Reset(score) {
   accScore = 0;
-  console.log(accScore, 'jjjj');
   click.play();
   document.querySelector('.admin .status').textContent = '';
 
   displayScore.textContent = 'SCORE: 0';
   tiles.forEach((tile, index) => {
     tile.style.backgroundColor = excludedColors[index]; //return to default colors
-    tile.style.outline = '';
   });
   color = targetColor();
   target.style.backgroundColor = color;
   setColors(color);
 });
-console.log(colors);
+
 setColors(color);
 assignColors(color, score);
