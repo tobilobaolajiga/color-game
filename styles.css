@@ -46,6 +46,7 @@ h1 {
 .colors .targetColor {
   width: 6rem;
   height: 6rem;
+  margin-top: 1rem;
   background-color: brown;
   border-radius: 25%;
   border: none;
