@@ -11,7 +11,7 @@ let color;
 let score = 0;
 const excludedColors = [
   '#39ff14',
-  ' #1b03a3',
+  ' #FFFF33',
   ' #ff10f0',
   ' #ff6700',
   ' #ff073a',
@@ -62,6 +62,7 @@ function assignColors(color, score) {
       if (tile[index] === mainColor) {
         wrong.pause();
         correct.play();
+
         tile.style.backgroundColor = tile[index];
         tile.style.outline = '5px solid white';
 
